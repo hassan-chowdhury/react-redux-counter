@@ -3,13 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { increment, decrement, reset } from '../actions/counter';
 
-const propTypes = {
-  count: PropTypes.number.isRequired,
-  aIncrement: PropTypes.func.isRequired,
-  aDecrement: PropTypes.func.isRequired,
-  aReset: PropTypes.func.isRequired,
-};
-
 const Counter = ({
   count,
   aIncrement,
@@ -26,6 +19,13 @@ const Counter = ({
     <button type="button" onClick={aReset}>reset</button>
   </div>
 );
+
+const propTypes = {
+  count: PropTypes.number.isRequired,
+  aIncrement: PropTypes.func.isRequired,
+  aDecrement: PropTypes.func.isRequired,
+  aReset: PropTypes.func.isRequired,
+};
 
 Counter.propTypes = propTypes;
 
